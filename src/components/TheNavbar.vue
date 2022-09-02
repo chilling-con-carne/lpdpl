@@ -8,13 +8,13 @@
         </div>
         <div :class="`absolute w-full h-full top-0 left-0 bg-black ${isOpen ? 'opacity-30 z-0' : 'opacity-0 -z-20'} duration-300 md:hidden`"></div>
         <nav :class="`sm-navbar md:md-navbar bg-white ${isOpen ? 'open' : ''} duration-300`">
-            <router-link class="text-black" to="/">Nos paniers</router-link>
-            <router-link class="text-black" to="/points-relais">Points-relais</router-link>
-            <router-link class="text-black" to="/weekly-basket">Panier de la semaine</router-link>
+            <router-link class="text-black hover:text-green-500" to="/">Nos paniers</router-link>
+            <router-link class="text-black hover:text-green-500" to="/points-relais">Points-relais</router-link>
+            <router-link class="text-black hover:text-green-500" to="/weekly-basket">Panier de la semaine</router-link>
             <img class="hidden md:inline w-20 translate-y-2 shadow-lg rounded-full" :src="Logo" alt="Logo des paniers du petit Lucien">
-            <router-link class="text-black" to="/infos">Informations</router-link>
-            <router-link class="text-black" to="/company-signup">Inscription entreprise</router-link>
-            <router-link class="text-black" to="/contact">Nous contacter</router-link>
+            <router-link class="text-black hover:text-green-500" to="/infos">Informations</router-link>
+            <router-link class="text-black hover:text-green-500" to="/company-signup">Inscription entreprise</router-link>
+            <router-link class="text-black hover:text-green-500" to="/contact">Nous contacter</router-link>
         </nav>
     </div>
 </template>
@@ -24,7 +24,7 @@ import { ref } from 'vue';
 
 import Logo from '../assets/logo.png';
 
-const isOpen = ref(true);
+const isOpen = ref(false);
 
 </script>
 

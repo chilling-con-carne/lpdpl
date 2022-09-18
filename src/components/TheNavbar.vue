@@ -6,7 +6,7 @@
             <div :class="`w-8 h-0.5 bg-black duration-300 ${isOpen ? 'opacity-0' : ''}`"></div>
             <div :class="`w-8 h-0.5 bg-black duration-300 ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`"></div>
         </div>
-        <div :class="`absolute w-full h-full top-0 left-0 bg-black ${isOpen ? 'opacity-30 z-0' : 'opacity-0 -z-20'} duration-300 md:hidden`"></div>
+        <div :class="`absolute w-full h-full top-0 left-0 bg-black ${isOpen ? 'opacity-30 z-10' : 'opacity-0 -z-20'} duration-300 md:hidden`"></div>
         <nav :class="`sm-navbar md:md-navbar bg-white ${isOpen ? 'open' : ''} duration-300`">
             <router-link class="text-black hover:text-green-500" to="/">Nos paniers</router-link>
             <router-link class="text-black hover:text-green-500" to="/points-relais">Points-relais</router-link>
@@ -52,10 +52,8 @@ const isOpen = ref(false);
         transform: translateX(-999px);
 
         background-color: white;
-    }
 
-    .md-navbar {
-        @apply w-full flex-row translate-x-0
+        z-index: 20;
     }
 
     .sm-navbar.open {
@@ -68,8 +66,9 @@ const isOpen = ref(false);
 
     .md-navbar {
         @apply shadow-lg;
+        @apply w-full flex-row translate-x-0;
 
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
 

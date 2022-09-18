@@ -1,0 +1,23 @@
+<template>
+    <div class="flex flex-col justify-center items-center rounded border-[1px] border-solid border-green-500 gap-4 py-4">
+        <h4 class="text-black text-lg font-semibold">{{ props.title }}</h4>
+        <img :src="imageUrl" alt="Basket's picture" class="w-full">
+        <ol class="pl-8 list-disc text-left">
+            <li v-for="(item, index) in props.content" :key="index" class="text-sm mr-4">{{ item }}</li>
+        </ol>    
+    </div>
+</template>
+
+<script setup lang="ts">
+const props = defineProps<{
+    title: string;
+    imgSrc: string;
+    content: Array<string>
+}>()
+
+const imageUrl = new URL(`../assets/pictures/baskets/${props.imgSrc}`, import.meta.url).href
+</script>
+
+<style scoped>
+
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-center items-center rounded border-[1px] border-solid border-green-500 gap-4 py-4">
+    <div class="flex flex-col justify-center items-center rounded border-[1px] border-solid border-green-500 gap-4 py-4 max-w-xs">
         <h4 class="text-black text-lg font-semibold">{{ props.title }}</h4>
         <img :src="imageUrl" alt="Basket's picture" class="w-full">
         <ol class="pl-8 list-disc text-left">
@@ -10,10 +10,10 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-    title: string;
     imgSrc: string;
-    content: Array<string>
-}>()
+    title: string;
+    content: Array<string>;
+}>();
 
 const imageUrl = new URL(`../assets/pictures/baskets/${props.imgSrc}`, import.meta.url).href
 </script>

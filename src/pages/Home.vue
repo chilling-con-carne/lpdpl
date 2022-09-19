@@ -37,7 +37,7 @@
       légumesde l’exploitation, frais et de saison.
     </p>
     <div
-      class="flex flex-col items-center lg:flex-row m-auto gap-4 lg:gap-8 w-10/12 md:w-1/2 lg:w-full"
+      class="flex flex-col justify-center items-center lg:flex-row m-auto gap-4 lg:gap-8 w-10/12 md:w-1/2 lg:w-full"
     >
       <basket
         v-for="basket in baskets"

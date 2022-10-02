@@ -1,6 +1,4 @@
 <template>
-  <BasketChoice>
-  </BasketChoice>
   <div
     class="bg-gradient-to-r from-[#ECEAEF] to-[#F3F2F7] flex flex-col md:flex-row justify-center items-center gap-4 pt-24 md:pl-4 md:pt-0"
   >
@@ -129,7 +127,6 @@ import HomePicture from "../assets/pictures/homePicture1.jpg";
 import AboutPicture from "../assets/pictures/homePicture2.jpg";
 import Basket from "../components/Basket.vue";
 import Advantage from "../components/Advantage.vue";
-import BasketChoice from "./BasketChoice.vue";
 
 const baskets: Array<_Basket> = [
   {

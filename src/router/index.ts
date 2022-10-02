@@ -6,6 +6,10 @@ const routes = [
     {
         path: '/',
         component: Home,
+    },
+    {
+        path: '/choix-panier',
+        component: () => import("../pages/BasketChoice.vue")
     }
 ]
 

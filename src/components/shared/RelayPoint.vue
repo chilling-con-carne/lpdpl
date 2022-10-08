@@ -4,7 +4,7 @@
     <div class="flex flex-col md:flex-row justify-center gap-4">
       <span class="flex flex-row justify-center">
         <img
-          src="../assets/pictures/location/blue.png"
+          src="../../assets/pictures/location/blue.png"
           alt="Normal delivery"
           class="w-6"
         />
@@ -12,7 +12,7 @@
       </span>
       <span class="flex flex-row justify-center">
         <img
-          src="../assets/pictures/location/green.png"
+          src="../../assets/pictures/location/green.png"
           alt="Organic delivery"
           class="w-6"
         />

@@ -10,7 +10,7 @@
 <script setup lang="ts">
 let props = defineProps<{
   type: string;
-  class: string;
+  class?: string;
   model: any;
   placeholder: string;
 }>();

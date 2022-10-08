@@ -5,8 +5,8 @@
     <h1 class="font-semibold text-xl">Connexion</h1>
     <form action="" class="w-full flex flex-col gap-8 lg:gap-16">
       <div class="flex flex-row w-full gap-2">
-        <Input type="text" placeholder="Nom" class="w-1/2" />
-        <Input type="text" placeholder="Prénom" class="w-1/2" />
+        <Input type="text" placeholder="Nom" class="w-1/2" :model="name" />
+        <Input type="text" placeholder="Prénom" class="w-1/2" :model="surname" />
       </div>
       <Input type="email" placeholder="Adresse Email" :model="email" />
       <Input type="tel" placeholder="Téléphone" :model="tel" />
@@ -32,6 +32,8 @@ import Input from "../components/shared/Input.vue";
 
 import { ref } from "vue";
 
+const name = ref("");
+const surname = ref("");
 const email = ref("");
 const password = ref("");
 const verifPassword = ref("");

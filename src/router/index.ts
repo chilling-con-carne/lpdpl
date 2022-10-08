@@ -9,7 +9,19 @@ const routes = [
     },
     {
         path: '/choix-panier',
-        component: () => import("../pages/BasketChoice.vue")
+        component: () => import("../pages/BasketChoice.vue"),
+    },
+    {
+        path: '/points-relais',
+        component: () => import("../pages/RelayPoint.vue"),
+    },
+    {
+        path: '/connexion',
+        component: () => import("../pages/Login.vue"),
+    },
+    {
+        path: '/inscription',
+        component: () => import("../pages/Registration.vue"),
     }
 ]
 

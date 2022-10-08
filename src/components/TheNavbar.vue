@@ -45,6 +45,9 @@
       <router-link class="text-black hover:text-green-500" to="/contact"
         >Nous contacter</router-link
       >
+      <router-link to="/login"
+        ><img :src="Login" class="w-6 mt-10 md:mt-0"
+      /></router-link>
     </nav>
   </div>
 </template>
@@ -53,6 +56,7 @@
 import { ref } from "vue";
 
 import Logo from "../assets/logo.png";
+import Login from "../assets/login.svg";
 
 const isOpen = ref(false);
 </script>

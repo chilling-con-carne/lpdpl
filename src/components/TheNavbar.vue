@@ -36,10 +36,10 @@
         :src="Logo"
         alt="Logo des paniers du petit Lucien"
       />
-      <router-link class="text-black hover:text-green-500" to="/infos"
+      <router-link class="text-black hover:text-green-500" to="/informations"
         >Informations</router-link
       >
-      <router-link class="text-black hover:text-green-500" to="/company-signup"
+      <router-link class="text-black hover:text-green-500" to="/entreprises"
         >Inscription entreprise</router-link
       >
       <router-link class="text-black hover:text-green-500" to="/contact"

@@ -9,6 +9,11 @@ const routes = [
         component: Home,
     },
     {
+        path: '/informations',
+        name: 'infos',
+        component: () => import("../pages/Infos.vue"),
+    },
+    {
         path: '/choix-panier',
         name: "basket-choice",
         component: () => import("../pages/BasketChoice.vue"),

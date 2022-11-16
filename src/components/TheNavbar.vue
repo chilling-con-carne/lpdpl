@@ -45,7 +45,7 @@
       <router-link class="text-black hover:text-green-500" to="/contact"
         >Nous contacter</router-link
       >
-      <router-link to="/login"
+      <router-link to="/connexion"
         ><img :src="Login" class="w-6 mt-10 md:mt-0"
       /></router-link>
     </nav>

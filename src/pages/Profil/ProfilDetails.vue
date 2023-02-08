@@ -33,7 +33,7 @@
 <script setup lang="ts">
     import Field from "../../components/shared/Field.vue";
     import { ref } from "vue";
-    import { useRouter, useRoute } from 'vue-router'
+    import router from '../../router/index'
 
     const name = ref("");
     const surname = ref("");
@@ -43,8 +43,7 @@
     const tel = ref("");
 
     function modifInformations() {
-    
-       useRouter().push("ProfilDetailsEdit");
+       router.push({name:"profil-details-edit"});
     }
 </script>
 

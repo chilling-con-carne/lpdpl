@@ -48,6 +48,16 @@ const routes = [
         name: 'order-recap',
         component: () => import('../pages/Orders/OrderRecap.vue'),
     },
+    {
+        path : "/profil/details",
+        name : "profil-details",
+        component: () => import("../pages/Profil/ProfilDetails.vue"),
+    },
+    {
+        path : "/profil/details-edit",
+        name : "profil-details-edit",
+        component: () => import("../pages/Profil/ProfilDetailsEdit.vue"),
+    }
 ]
 
 
@@ -55,3 +65,4 @@ export default createRouter({
     history: createWebHashHistory(),
     routes
 })
+

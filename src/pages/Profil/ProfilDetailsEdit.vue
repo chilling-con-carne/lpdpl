@@ -23,7 +23,6 @@
                 <Field title="Fin de l'abonnement" content="10/09/2023" :modif="false"></Field>
             </div>
             <button 
-                @click="modifInformations()"
                 class=" w-1/2 justify-self-center col-span-2 btn btn-md bg-green-500 hover:bg-green-600 border-none normal-case">
                 Valider les modifications
             </button>
@@ -41,15 +40,6 @@
     const password = ref("");
     const verifPassword = ref("");
     const tel = ref("");
-
-    const modifInformations = () => {
-        const fields = document.getElementsByTagName("");
-        console.log(fields)
-        fields.forEach(function (elem){
-            elem.setAttribute("modif", true);
-            console.log(elem.getAttribute("modif"));
-        });
-    }
 </script>
 
 <style>

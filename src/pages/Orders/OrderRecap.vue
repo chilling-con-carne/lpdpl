@@ -1,28 +1,28 @@
 <template>
   <div
-    id="modal"
+    id="modal-success"
     class="hidden z-20 absolute h-screen w-screen flex justify-center items-center"
     style="background-color: rgba(255, 255, 255, 0.5)"
   >
-    <div class="z-40 text-start w-1/3 lg:w-1/3 m d:w-1/2 bg-white border border-solid">
+    <div class="z-40 text-start text-black w-1/3 lg:w-1/3 m d:w-1/2 bg-white border border-solid">
       <div class="my-4 mx-6 flex justify-between">
         <img src="../../assets/pictures/orders/success.svg" alt="succes icon" />
         <h1 class="font-bold ml-3 grow">La commande a été passée avec succès</h1>
         <img
-          @click="toggleModal()"
+          @click="toggleModal('success')"
           class="cursor-pointer"
           src="../../assets/pictures/orders/close.svg"
           alt="succes icon"
         />
       </div>
       <p class="m-6">
-        Vos dates de livraisons seront ensuite transmises instantanéments après le
+        Vos dates de livraisons seront ensuite transmises instantanément après le
         règlement de la commande. Pour plus de facilité, le règlement en ligne s'effectue
         en 3 fois sans frais (le 20 du mois).
       </p>
       <div class="bg-slate-300 flex flex-col items-end border border-solid">
         <button
-          @click="toggleModal()"
+          @click="toggleModal('success')"
           class="btn btn-md my-3 mr-3 bg-green-500 hover:bg-green-600 border-none normal-case"
           href="#"
         >
@@ -31,6 +31,39 @@
       </div>
     </div>
   </div>
+
+  <div
+    id="modal-error"
+    class="hidden z-20 absolute h-screen w-screen flex justify-center items-center"
+    style="background-color: rgba(255, 255, 255, 0.5)"
+  >
+    <div class="z-40 text-start text-black w-1/3 lg:w-1/3 m d:w-1/2 bg-white border border-solid">
+      <div class="my-4 mx-6 flex justify-between">
+        <img src="../../assets/pictures/orders/error.svg" alt="error icon" />
+        <h1 class="font-bold ml-3 grow">Erreur</h1>
+        <img
+          @click="toggleModal('error')"
+          class="cursor-pointer"
+          src="../../assets/pictures/orders/close.svg"
+          alt="succes icon"
+        />
+      </div>
+      <p class="m-6">
+        Nous rencontrons actuellement un problème pour traiter votre commande, veuillez réessayer ultérieurement.
+      </p>
+      <div class="bg-slate-300 flex flex-col items-end border border-solid">
+        <button
+          @click="toggleModal('error')"
+          class="btn btn-md my-3 mr-3 bg-green-500 hover:bg-green-600 border-none normal-case"
+          href="#"
+        >
+          Retour vers la page principale
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
   <div
     id="orderRecap"
     class="z-0 h-screen w-2/3 md:w-2/3 lg:w-1/2 m-auto flex flex-col gap-8 lg:gap-16 justify-center"
@@ -63,7 +96,7 @@
         ></Facturation>
       </div>
       <button
-        @click="toggleModal()"
+        @click="toggleModal('success')"
         class="w-1/2 justify-self-center col-span-2 btn btn-md bg-green-500 hover:bg-green-600 border-none normal-case"
       >
         Passer la commande
@@ -90,8 +123,8 @@ const basketNumber = 24;
 const basketPrice = 12;
 const tax = 5.5;
 
-const toggleModal = () => {
-  let modal = document.getElementById("modal");
+const toggleModal = (val:string) => {
+  let modal = (val === 'success') ? document.getElementById("modal-success") : document.getElementById("modal-error");
   let orderRecap = document.getElementById("orderRecap");
   if (modal != null && orderRecap != null) {
     if (modal.style.display != "none") {

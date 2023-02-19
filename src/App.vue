@@ -11,6 +11,6 @@ import ProfilDetailsEdit from './pages/Profil/ProfilDetailsEdit.vue';
 <template>
   <the-navbar />
   <router-view></router-view>
-  <ProfilDetails></ProfilDetails>
+  <OrderRecap></OrderRecap>
   <the-footer/>
 </template>
